@@ -21,14 +21,14 @@
     </head>
     <body>
         <section class="dept">
-            <img src="./assets/images/Pondy_Univ_logo1.png" alt="PU Logo" id="PUlogo">
+            <a href="http://www.pondiuni.edu.in/" target="_blank"><img src="./assets/images/Pondy_Univ_logo1.png" alt="PU Logo" id="PUlogo"></a>
             <h3>Get Your Farewell Certificate</h3>
             <h1><a href="https://chempu.ac.in/" target="_blank" id="chemdept"><span style="color:rgb(189, 22, 44);font-weight: 800;">Department of</span><span style="color:rgb(8, 80, 29);font-weight: 800;"> Chemistry</span></a></h1>
             <form id="formput">
                 <div class="form-group">
                     <div class="col-auto my-4">
                         <label class="sr-only" for="inlineFormInput">Name</label>
-                        <input type="text" class="form-control mx-auto mb-2" id="name" placeholder="Type Your Name" required>
+                        <input type="text" maxlength="20" class="form-control mx-auto mb-2" id="name" placeholder="Type Your Name" required>
                     </div>
                     <div class="col-auto my-4 mx-auto" id="userImage">
                         <label class="sr-only" for="inlineFormInput">photo</label>
@@ -42,86 +42,96 @@
             <button type="button" class="btn btn-primary mb-4" style="box-shadow: none;" id="preview">view</button>
         </div>
         <canvas id="canvas"></canvas>
-        <img id="img" style="display: none;"  onload='draw()' src="./assets/images/CERTIFICATE5 - Copy.jpg"/>
+        <img id="img" style="display: none;"  onload='draw()' src="./assets/images/cert.jpg"/>
         <img id="img1" style="display: none;" src = ""/>
         <div id="container">
             <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="dpdf" onclick="downloadpdf()">DOWNLOAD PDF</button>
             <button type="button" class="btn btn-outline-primary mb-2" style="box-shadow: none;" id="djpg" onclick="downloadjpg()">DOWNLOAD JPEG</button>
         </div>
+        <footer>
+            <div class="center">
+                Copyright &copy;2020&nbsp;&nbsp;&nbsp;aritraroy24.github.io<br>
+                All Rights Reserved
+            </div>
+        </footer>
         <script>
-
-function draw(){
-var canvas = document.getElementById('canvas'),
-ctx = canvas.getContext('2d');
-canvas.width = $('#img').width();
-canvas.crossOrigin = "Anonymous";
-canvas.height = $('#img').height();
-ctx.drawImage($('#img').get(0), 0, 0);
-};
-canvas.width = $('#img').width();
-canvas.height = $('#img').height();
-var x = $('#img1').width();
-var y = $('#img1').height();
-var ratio = x/y
+            function draw(){
+            var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d');
+            canvas.width = $('#img').width();
+            canvas.crossOrigin = "Anonymous";
+            canvas.height = $('#img').height();
+            ctx.drawImage($('#img').get(0), 0, 0);
+            };
+            canvas.width = $('#img').width();
+            canvas.height = $('#img').height();
+            var x = $('#img1').width();
+            var y = $('#img1').height();
+            var ratio = x/y
             var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-today = dd + '/' + mm + '/' + yyyy
-function previewFile() {
-const preview = document.getElementById('img1');
-const file = document.querySelector('input[type=file]').files[0];
-const reader = new FileReader();
-reader.addEventListener("load", function () {
-    // convert image file to base64 string
-    preview.src = reader.result;
-    }, false);
-
-    if (file) {
-    reader.readAsDataURL(file);
-    }
-}
-$(document).on('click','#submit',function(){
-    var canvas = document.getElementById('canvas'),
-    ctx = canvas.getContext('2d');
-    $('#preview').css('display','inline-block');
-    //redraw image
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.drawImage($('#img').get(0), 0, 0);
-    ctx.drawImage($('#img1').get(0), 50, 50, 80, 80);
-    //refill text
-    ctx.fillStyle = "black";
-    ctx.textAlign = 'center';
-    ctx.font = "70pt cursive";
-    ctx.fillText($('#name').val(),150,200);
-    ctx.font = '30pt verdana'
-    ctx.fillText(today,260,815);  
-});
-$(document).on('click','#preview',function(){
-    $('#canvas').css('display','inline-block');
-    $('#dpdf').css('display','inline-block');
-    $('#djpg').css('display','inline-block');
-})
-function downloadjpg(){ 
-    var canvas = document.getElementById('canvas');
-    canvas.crossOrigin = "Anonymous";
-    var image = canvas.toDataURL();  
-    var tmpLink = document.createElement( 'a' );     
-    tmpLink.download = 'certificate.jpg';
-    tmpLink.href = image;
-    document.body.appendChild( tmpLink );     
-    tmpLink.click();     
-    document.body.removeChild( tmpLink );
-}
-function downloadpdf(){
-    var canvas = document.getElementById('canvas');
-    canvas.crossOrigin = "Anonymous";
-    var img = canvas.toDataURL('image/JPEG',1.0); 
-    var pdf = new jsPDF('p','mm');
-    pdf.text(30,30,'this is our program')
-    pdf.addImage(img, 'JPEG', 0, 0, 210, 297); 
-    pdf.save('certificate.pdf')
-}
+            // var dd = String(today.getDate()).padStart(2, '0');
+            // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            // var yyyy = today.getFullYear();
+            // today = dd + '/' + mm + '/' + yyyy
+            function previewFile() {
+            const preview = document.getElementById('img1');
+            const file = document.querySelector('input[type=file]').files[0];
+            const reader = new FileReader();
+            reader.addEventListener("load", function () {
+                // convert image file to base64 string
+                preview.src = reader.result;
+                }, false);
+                if (file) {
+                reader.readAsDataURL(file);
+                }
+            }
+            $('#name').bind('input propertychange', function() {
+                if (this.value.length > 20) {
+                    $("#name").val($("#name").val().substring(0,20));
+                    alert("stop");
+                }
+            });
+            $(document).on('click','#submit',function(){
+                var canvas = document.getElementById('canvas'),
+                ctx = canvas.getContext('2d');
+                $('#preview').css('display','inline-block');
+                //redraw image
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                ctx.drawImage($('#img').get(0), 0, 0);
+                ctx.drawImage($('#img1').get(0), 943, 916, 409, 409);
+                //refill text
+                ctx.fillStyle = "white";
+                ctx.textAlign = 'center';
+                ctx.font = "bold italic 55pt cursive";
+                ctx.fillText($('#name').val(),425,912);
+                // ctx.font = '30pt verdana'
+                // ctx.fillText(today,260,815);  
+            });
+            $(document).on('click','#preview',function(){
+                $('#canvas').css('display','inline-block');
+                $('#dpdf').css('display','inline-block');
+                $('#djpg').css('display','inline-block');
+            })
+            function downloadjpg(){ 
+                var canvas = document.getElementById('canvas');
+                canvas.crossOrigin = "Anonymous";
+                var image = canvas.toDataURL();  
+                var tmpLink = document.createElement( 'a' );     
+                tmpLink.download = 'farewell2020_certificate.jpg';
+                tmpLink.href = image;
+                document.body.appendChild( tmpLink );     
+                tmpLink.click();     
+                document.body.removeChild( tmpLink );
+            }
+            function downloadpdf(){
+                var canvas = document.getElementById('canvas');
+                canvas.crossOrigin = "Anonymous";
+                var img = canvas.toDataURL('image/JPEG',1.0); 
+                var pdf = new jsPDF('p','mm');
+                pdf.text(30,30,'this is our program')
+                pdf.addImage(img, 'JPEG', 0, 0, 210, 297); 
+                pdf.save('farewell2020_certificate.pdf')
+            }
         </script>
     </body>
 </html>

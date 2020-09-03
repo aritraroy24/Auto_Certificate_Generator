@@ -24,6 +24,12 @@
     width: 8vw;
     margin-bottom: 55px;
 }
+#PUlogo:hover {
+    margin-top: 5vh;
+    height: 8.6vw;
+    width: 8.6vw;
+    margin-bottom: 55px;
+}
 
 h3{
     padding: 2vh;
@@ -52,7 +58,6 @@ h3{
     box-shadow: none;
     width: 19vw;
 }
-
 #submit {
     background: #142245;
     color: white;
@@ -63,7 +68,6 @@ h3{
     box-shadow: none;
     width: 8vw;
 }
-
 #userImage{
     width: 17vw;
     display: flex;
@@ -71,8 +75,6 @@ h3{
     justify-content: center;
     flex-direction: column;
 }
-
-
 #container_button{
     display: flex;
     align-items: center;
@@ -115,4 +117,18 @@ button{
 }
 #img1{
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+footer{
+
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #142245;
+    color: white;
+    padding: 13px 20px;
+    margin-bottom: 0vh;
+}
+.center{
+    text-align: center;
 }
