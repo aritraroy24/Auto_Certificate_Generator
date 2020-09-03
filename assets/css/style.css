@@ -91,6 +91,7 @@ h3{
     text-align: center;
     margin-top:0.4em;
     margin-bottom: 2em;
+    padding-bottom: 2vw;
 }
 #canvas{
     position: relative;
@@ -120,14 +121,12 @@ button{
 }
 
 footer{
-
+    position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
     background: #142245;
     color: white;
-    padding: 13px 20px;
-    margin-bottom: 0vh;
 }
 .center{
     text-align: center;

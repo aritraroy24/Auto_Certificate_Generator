@@ -35,6 +35,9 @@ section h3 {
     font-size: 0.7rem;
     width: 10vw;
 }
+#container{
+    padding-bottom: 3vw;
+}
 #container_button .btn{
     width: 6.25vw;
     font-size: 0.7rem;
