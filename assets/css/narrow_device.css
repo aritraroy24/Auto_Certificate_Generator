@@ -27,6 +27,9 @@ section h3 {
     box-shadow: none;
     width: 90vw;
 }
+#inputImage {
+    font-size: 0.7rem;
+}
 #profile{
     box-shadow: none;
     width: 85vw;

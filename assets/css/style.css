@@ -54,6 +54,10 @@ h3{
     box-shadow: none;
     width: 28vw;
 }
+#inputImage {
+    font-size: 1.1rem;
+    text-align: center;
+}
 #profile{
     box-shadow: none;
     width: 19vw;
