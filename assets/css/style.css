@@ -19,7 +19,7 @@
     box-shadow: none;
 }
 #PUlogo{
-    margin-top: 5vh;
+    margin-top: 4vh;
     height: 8vw;
     width: 8vw;
     margin-bottom: 55px;
@@ -91,7 +91,7 @@ h3{
     text-align: center;
     margin-top:0.4em;
     margin-bottom: 2em;
-    padding-bottom: 2vw;
+    padding-bottom: 5vw;
 }
 #canvas{
     position: relative;
@@ -127,6 +127,7 @@ footer{
     right: 0px;
     background: #142245;
     color: white;
+    padding: 10px;
 }
 .center{
     text-align: center;
