@@ -2,10 +2,7 @@
 /* main * {
     margin-bottom: 15px;
 } */
-@font-face {
-    font-family: alex;
-    src: url('../fonts/AlexBrush-Regular.ttf');
-}
+
 * {
     padding: 0;
     margin: 0;
