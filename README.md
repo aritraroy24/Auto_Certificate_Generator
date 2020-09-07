@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/visual_studio_code-1.48.2-181717?colorA=ae36d6&style=for-the-badge&logo=visual-studio-code)
 ![](https://img.shields.io/badge/github-hosting-181717?colorA=181717&colorB=125e59&style=for-the-badge&logo=github)
 # Auto_Certificate_Generator
-It is an automatic certificate generator made with only ```HTML5```, ```CSS3``` and ```JavaScript(ECMA 6)```
+It is an automatic certificate generator made with only ```HTML5```, ```CSS3``` and <br>```JavaScript(ECMA 6)```
 ---
 
 
@@ -18,11 +18,10 @@ The main HTML and JavaScript code has been writen in this index.html file
 
 
 ---
-#### Note :memo:
+## Note :memo:
 The certificate has been drawn in the webpage using ```ctx.drawImage()``` function. For further information about this process please visit - <br>
 https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage :link:
 
 
 ----
-----
-Special thanks to [Satadeep Dashgupta](https://github.com/satadeep3927)
+:white_check_mark: Special thanks to [Satadeep Dashgupta](https://github.com/satadeep3927) for helping me out in this project :pray: :pray: :pray:
