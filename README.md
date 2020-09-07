@@ -10,11 +10,11 @@ It is an automatic certificate generator made with only ```HTML5```, ```CSS3``` 
 
 ## :small_red_triangle: assets
 #### :small_blue_diamond: css
-All styles has been designed here including responsive design.
+All **styles** has been designed here including responsive design.
 #### :small_blue_diamond: images
-All required images and logos have been kept in this folder
+All required **images** and **logos** have been kept in this folder
 ## :small_red_triangle: index.html
-The main HTML and JavaScript code has been writen in this index.html file
+The main **HTML and **JavaScript** code has been writen in this index.html file
 
 
 ---
