@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/ecma6-used-bee5ed?colorA=487d3e&colorB=b0c92e&style=for-the-badge&logo=javascript)
 ![](https://img.shields.io/badge/visual_studio_code-1.48.2-181717?colorA=ae36d6&style=for-the-badge&logo=visual-studio-code)
 # Auto_Certificate_Generator
-```It is an automatic certificate generator made with only ***HTML5***, CSS3 and JavaScript(ECMA 6)```
+```It is an automatic certificate generator made with only <b>HTML5</b>, <b>CSS3</b> and <b>JavaScript(ECMA 6)</b>```
 ---
 
 
