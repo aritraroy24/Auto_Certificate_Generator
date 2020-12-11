@@ -27,4 +27,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawIm
 :white_check_mark: Special thanks to [Satadeep Dashgupta](https://github.com/satadeep3927) for helping me out in this project :pray: :pray: :pray:
 
 ----
-## [Live Demo](https://aritraroy24.github.io/Auto_Certificate_Generator/)
+## Live Demo :point_down:
+### [Auto_Certificate_Generator](https://aritraroy24.github.io/Auto_Certificate_Generator/)
+[![image](https://www.linkpicture.com/q/2020-12-11-23-37-59.gif)](https://www.linkpicture.com/view.php?img=LPic5fd3b8d892fc8869057039)
